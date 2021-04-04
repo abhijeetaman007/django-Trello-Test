@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 # Create your models here.
 
 
@@ -29,7 +30,7 @@ class TaskList(models.Model):
     name = models.TextField(max_length=50)
     created_at = models.DateTimeField(default = timezone.now)
     
-class Task(model.Model):
+class Task(models.Model):
     content = models.TextField()
     created_at = models.DateTimeField(default= timezone.now)
     deadline = models.DateTimeField(blank=True , null= True)
